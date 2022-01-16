@@ -1,0 +1,143 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+#grid{
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 3fr 1fr;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    grid-template-areas:
+    "header header"
+    "main publicidad"
+    "footer footer"
+}
+header{
+    grid-area: header;
+}
+main{
+    grid-area: main;
+}
+aside{
+    grid-area: publicidad;
+}
+footer{
+    grid-area: footer;
+}
+
+/* Header */
+.header{
+    justify-content: center;
+    align-items: center;
+}
+.header__logo{
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+}
+.header__navbar ul{
+    padding: 10px;
+    list-style-type: none;
+}
+.header__navbar li{
+    padding: 10px;
+    margin: 10px;
+}
+.header__navbar a{
+    text-decoration: none;
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Main */
+.main{
+    align-items: center;
+}
+.main__title{
+    font-family: Arial;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px;
+}
+.main__text{
+    padding: 2rem;
+    font-family: Arial;
+    font-size: 14px;
+    text-align: justify;
+}
+.especialidades{
+    display: flex;
+    font-family: Arial;
+    font-size: 14px;
+}
+.especialidades__title{
+    font-family: Arial;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px;
+}
+.especialidades img{
+    width: 300px;
+}
+.especialidades ul{
+    padding: 2rem;
+    list-style-type: none;
+}
+.publicidad{
+    border: solid 1px black;
+}
+
+/* Footer*/
+.footer{
+    background-color: #09425A;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.footer__pages ul{
+    padding: 2rem;
+    list-style-type: none;
+}
+.footer__pages a{
+    text-decoration: none;
+    font-family: Arial;
+    font-size: 14px;
+    color: lightgray;
+}
+.footer__socialmedia{
+    font-family: Arial;
+    font-size: 12px;
+    font-weight: bold;
+    color: lightgray;
+}
+.footer__socialmedia ul{
+    padding: 2rem;
+    list-style-type: none;
+}
+.footer__socialmedia li{
+    display: inline-block;
+    margin: 10px;
+}
+.footer__socialmedia img{
+    width: 20px;
+    height: 20px;
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+.header{
+    display: flex;
+}
+.header__navbar li{
+    display: inline-block;
+}
+.main{
+    display: flex;
+}
+.footer{
+    display: flex;
+}
+}
